@@ -136,9 +136,15 @@ snippet children
 snippet clearq
 	${1:obj}.clearQueue(${2:'queue name'})
 snippet click
-	${1:obj}.click(function (${2:e}) {
-		${0:// event handler}
+	${1:obj}.on('click', function (${2:e}) {
+		count(deviceObj.name + '_');
 	});
+snippet dclick
+	$(document).on('click', ${1:obj}, function (e) {
+		count(deviceObj.name + '_');
+	});
+snippet track
+	track(deviceObj.pvtag + '/${0}');
 snippet clone
 	${1:obj}.clone()
 snippet contains

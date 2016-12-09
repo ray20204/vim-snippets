@@ -1,7 +1,5 @@
 snippet enc
 	# encoding: utf-8
-snippet frozen
-	# frozen_string_literal: true
 snippet #!
 	#!/usr/bin/env ruby
 # New Block
@@ -725,7 +723,3 @@ snippet iiexp
 	it { is_expected.to ${0} }
 snippet iiexpn
 	it { is_expected.not_to ${0} }
-snippet agg
-	aggregate_failures '${1:message}' do
-		${0}
-	end

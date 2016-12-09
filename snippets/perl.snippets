@@ -84,9 +84,7 @@ snippet fore
 	${1:expression} foreach @${2:array};
 # Package
 snippet package
-	package ${1:`expand('%:p:s?.*lib/??:r:gs?/?::?')`};
-	use strict;
-	use warnings;
+	package ${1:`substitute(vim_snippets#Filename('', 'Page Title'), '^.', '\u&', '')`};
 
 	${0}
 
@@ -95,9 +93,7 @@ snippet package
 	__END__
 # Package syntax perl >= 5.14
 snippet packagev514
-	package ${1:`expand('%:p:s?.*lib/??:r:gs?/?::?')`} ${2:0.99};
-	use v5.14;
-	use warnings;
+	package ${1:`substitute(vim_snippets#Filename('', 'Page Title'), '^.', '\u&', '')`} ${2:0.99};
 
 	${0}
 
